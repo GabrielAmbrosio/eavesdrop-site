@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Eavesdrop</title>
+    <meta name="description" content="What Eavesdrop reads, sends and stores. No servers, no accounts, no tracking." />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="assets/icon-128.png" alt="" width="32" height="32" />
+          Eavesdrop
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="./#features">Features</a>
+          <a href="./#pricing">Pricing</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="legal">
+      <div class="wrap">
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: September 24, 2026</p>
+
+        <div class="summary">
+          <p style="margin: 0">
+            <strong>In short:</strong> Eavesdrop has no servers and no accounts. It fetches YouTube comments from
+            YouTube's official API using only the video ID, keeps your settings and saved comments in your own browser,
+            and only talks to Lemon Squeezy if you activate a Pro license.
+          </p>
+        </div>
+
+        <p>Eavesdrop is not affiliated with, endorsed by, or sponsored by YouTube, Google, or Lemon Squeezy.</p>
+
+        <h2>What Eavesdrop reads</h2>
+        <p>
+          While you are on a YouTube video page, Eavesdrop reads that page's video ID from the URL, then fetches that
+          video's comments from YouTube's own <strong>public, official Data API v3</strong>
+          (<code>commentThreads.list</code> / <code>comments.list</code> on <code>googleapis.com</code>) to show them in a
+          floating panel over the video. It does not read anything from any other tab, site, watch history, or Google
+          account activity.
+        </p>
+        <p>
+          Eavesdrop's script loads on every <code>youtube.com</code> page, not only on video pages, because YouTube
+          switches between pages without a full reload and a script that only loaded on video pages would miss a video
+          you reached from the home page or search. On any page that is not a video (<code>/watch</code>), it does
+          nothing.
+        </p>
+
+        <h2>What Eavesdrop sends</h2>
+        <ul>
+          <li>
+            <strong>To Google's YouTube Data API v3:</strong> requests for pages of comments and replies, sent to
+            <code>googleapis.com</code> using an API key that belongs to Eavesdrop (not to you). That key identifies the
+            application to Google for quota and abuse-prevention purposes; it is the same fixed value for every
+            installation and is not derived from anything about you. Nothing is added to these requests beyond the video
+            ID (to fetch that video's comments) and, when you expand a thread's replies, that comment's ID.
+          </li>
+          <li>
+            <strong>To Lemon Squeezy, only if you activate a Pro license:</strong> when you paste a license key in
+            Settings and click “Activate”, Eavesdrop sends that key (plus a randomly generated, anonymous label for this
+            browser install — not your name, email, or any account identifier) to Lemon Squeezy's license API to confirm
+            the purchase. While Pro is active, Eavesdrop re-checks that same key at most once a day (only the key itself),
+            so a refunded or revoked license stops unlocking Pro. If you never activate a license, Eavesdrop never
+            contacts Lemon Squeezy.
+          </li>
+          <li>
+            <strong>Nowhere else.</strong> Eavesdrop does not operate its own server, so there is nowhere else for data to
+            go. Comment text is never sent anywhere beyond the request that fetched it.
+          </li>
+        </ul>
+
+        <h2>What Eavesdrop stores, and where</h2>
+        <p>
+          All of the following stays on your own device, or syncs only through Chrome's own built-in sync if you have it
+          turned on for your Chrome profile (Chrome operates that sync, not Eavesdrop):
+        </p>
+        <ul>
+          <li>
+            <strong>Your plan</strong> (Free or Pro) and, if you activated one, <strong>your Pro license key</strong>, so
+            it can be shown back to you and re-validated. Chrome sync storage.
+          </li>
+          <li>
+            <strong>Comments you saved</strong> — author, text, like count, the video's title, a link back to the comment,
+            and any note or tags you add in Settings, only for comments you explicitly saved. Exporting them (Markdown,
+            CSV or JSON) or sharing one as an image creates a file or clipboard image on your device; nothing is uploaded.
+            Chrome local storage, capped at 200 saved comments.
+          </li>
+          <li>
+            <strong>Your settings:</strong> language, appearance, auto-scroll speed, which panel features are on, and any
+            mute words you typed. Chrome sync storage. Mute words are matched against comment text entirely on your
+            device.
+          </li>
+          <li>
+            <strong>A session-only log of the last 20 network requests</strong> (just the host and request type, e.g.
+            “www.googleapis.com · commentThreads.list” — never content, comment text, or the API key). Cleared when the
+            browser closes; it exists so you can verify from Settings that nothing unexpected happens.
+          </li>
+          <li>
+            <strong>A few small device-local values:</strong> the panel's position, size and open/closed state, which
+            comment IDs you've already seen per video (for “new since your last visit”), whether you've seen the
+            first-use tips, and a local cache of recently viewed videos' comments so they load instantly. None of this
+            leaves your browser.
+          </li>
+        </ul>
+        <p>
+          One technical caveat: to draw the panel inside YouTube's page, Eavesdrop hands your settings, mute words and the
+          IDs of the comments you saved on the current video (never their text, and never those from other videos) to
+          the part of the extension running inside that page, and keeps the comment cache and “seen” list in the page's
+          own browser storage. YouTube's own page scripts could technically read them, the same way they can read
+          anything else shown on that page. Eavesdrop itself never sends them anywhere.
+        </p>
+
+        <h2>Features that are currently inactive</h2>
+        <p>
+          Eavesdrop's code includes on-device comment translation and an on-device AI comment summary. Both are turned
+          off and neither runs or sends anything today. If they are turned on in the future, they are designed to run
+          entirely on your device through Chrome's built-in AI APIs, and this policy will be updated before that
+          happens.
+        </p>
+        <p>
+          Eavesdrop is read-only with respect to your YouTube account: it cannot like, dislike, post or change anything on
+          YouTube.
+        </p>
+
+        <h2>Future changes</h2>
+        <p>
+          A future version may route comment requests through a server we operate, so the YouTube API key is kept
+          server-side. No such server exists today. This policy will be updated before any change like that ships, not
+          after.
+        </p>
+
+        <h2>Contact</h2>
+        <p>
+          Questions about this policy or how Eavesdrop handles data:
+          <a href="mailto:fixcelservice@gmail.com">fixcelservice@gmail.com</a>.
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="assets/icon-128.png" alt="" width="24" height="24" />
+          Eavesdrop
+        </a>
+        <nav aria-label="Footer">
+          <a href="./">Home</a>
+          <a href="mailto:fixcelservice@gmail.com">Contact</a>
+        </nav>
+        <p class="disclaimer">
+          Eavesdrop is not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

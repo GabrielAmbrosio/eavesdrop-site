@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Eavesdrop — YouTube comments without leaving the video</title>
+    <meta
+      name="description"
+      content="Eavesdrop is a Chrome extension that shows YouTube comments in a floating glass panel over the video. Watch and read at the same time — free, private, no account."
+    />
+    <meta property="og:title" content="Eavesdrop — YouTube comments without leaving the video" />
+    <meta
+      property="og:description"
+      content="A floating comments panel over the YouTube player. Timestamps that jump, comments about this moment, save and share. Free Chrome extension."
+    />
+    <meta property="og:image" content="assets/share-card.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="assets/icon-128.png" alt="" width="32" height="32" />
+          Eavesdrop
+        </a>
+        <nav class="nav-links" aria-label="Main">
+          <a class="hide-sm" href="#features">Features</a>
+          <a class="hide-sm" href="#pricing">Pricing</a>
+          <a class="hide-sm" href="#faq">FAQ</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+        <a class="btn btn-primary btn-sm" data-cws href="#get">Add to Chrome</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <div>
+            <span class="eyebrow"><span class="dot"></span> Free Chrome extension</span>
+            <h1>YouTube comments, <span class="grad">without leaving the video.</span></h1>
+            <p class="lead">
+              Eavesdrop puts the comments in a floating glass panel right over the player — so you can
+              watch and read at the same time, even in fullscreen.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" data-cws href="#get">Add to Chrome — it's free</a>
+              <a class="btn btn-ghost" href="#features">See what it does</a>
+            </div>
+            <p class="cta-note" data-cws-note>No account. No tracking. No ads.</p>
+          </div>
+
+          <div class="mock" role="img" aria-label="Eavesdrop's comments panel floating over a YouTube video">
+            <div class="mock-panel" aria-hidden="true">
+              <div class="mock-head"><span>⠿</span><span>Comments</span><span>▶ 🆕 ⚙ −</span></div>
+              <div class="mock-moment">💬 3 comments about this moment</div>
+              <div class="mock-comment">
+                <b>@nightowl</b>
+                <p>The key change at <span class="ts">2:47</span> gives me chills every time</p>
+                <small>❤️ 12.4K</small>
+              </div>
+              <div class="mock-comment">
+                <b>@marta.r</b>
+                <p>Came for the song, stayed for the comments 😂</p>
+                <small>❤️ 8.1K</small>
+              </div>
+              <div class="mock-comment">
+                <b>@dev_jules</b>
+                <p><span class="ts">1:12</span> is where it all starts, don't skip it</p>
+                <small>❤️ 3.9K</small>
+              </div>
+              <div class="mock-comment">
+                <b>@leo</b>
+                <p>Who's here in 2026?</p>
+                <small>❤️ 2.2K</small>
+              </div>
+            </div>
+            <div class="mock-bar"></div>
+            <div class="mock-progress"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Features</span>
+            <h2>Everything the comments section should have been.</h2>
+            <p>Stop scrolling away from the video. Eavesdrop brings the conversation to the player.</p>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <div class="icon">🪟</div>
+              <h3>A panel that floats</h3>
+              <p>Drag it anywhere, resize it, snap it to a corner or minimize it to a bubble. Works in normal, theater and fullscreen.</p>
+            </article>
+            <article class="card">
+              <div class="icon">⏱️</div>
+              <h3>Comments about this moment</h3>
+              <p>See what people say about the exact part you're watching, as the video plays.</p>
+            </article>
+            <article class="card">
+              <div class="icon">🔗</div>
+              <h3>Timestamps that jump</h3>
+              <p>“2:47” in a comment takes the video right there. The community index shows the most-mentioned moments.</p>
+            </article>
+            <article class="card">
+              <div class="icon">🆕</div>
+              <h3>New since your last visit</h3>
+              <p>Come back to a video and jump straight to the comments posted after you last watched.</p>
+            </article>
+            <article class="card">
+              <div class="icon">🔎</div>
+              <h3>Search, sort, mute</h3>
+              <p>Search the comments, sort by likes, and blur comments with words you choose — spoilers stay hidden.</p>
+            </article>
+            <article class="card">
+              <div class="icon">▶️</div>
+              <h3>Auto-scroll</h3>
+              <p>Let the comments scroll by themselves while you watch. One click pauses it.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap split">
+          <div>
+            <span class="kicker">Save &amp; share</span>
+            <h2>Keep the comments worth keeping.</h2>
+            <p class="lead" style="max-width: none">
+              Bookmark any comment with one click, and turn the best ones into images made for sharing.
+            </p>
+            <ul class="checks">
+              <li><span><strong>Save with 🔖</strong> — grouped by video, with the video's title.</span></li>
+              <li><span><strong>Notes and tags</strong> — add your own context and find it later.</span></li>
+              <li><span><strong>Export</strong> — Markdown for Notion or Obsidian, CSV or JSON.</span></li>
+              <li><span><strong>Share as image</strong> — a clean card, ready for social media or chats.</span></li>
+            </ul>
+          </div>
+          <img
+            class="share-img"
+            src="assets/share-card.png"
+            alt="A YouTube comment turned into a shareable image card by Eavesdrop"
+            width="1080"
+            height="1080"
+            loading="lazy"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Private by design</span>
+            <h2>Your comments, your browser.</h2>
+            <p>Eavesdrop has no servers and no accounts. Here's exactly what happens.</p>
+          </div>
+          <div class="grid">
+            <article class="card">
+              <div class="icon">📡</div>
+              <h3>Official YouTube API</h3>
+              <p>Comments come from YouTube's public Data API. Only the video ID is sent to fetch them.</p>
+            </article>
+            <article class="card">
+              <div class="icon">💾</div>
+              <h3>Stays on your device</h3>
+              <p>Settings, saved comments, notes and tags live in your browser. Nothing is uploaded.</p>
+            </article>
+            <article class="card">
+              <div class="icon">👀</div>
+              <h3>See every request</h3>
+              <p>A “Network activity” screen in Settings lists every request Eavesdrop makes.</p>
+            </article>
+          </div>
+          <p style="margin-top: 22px"><a href="privacy.html">Read the full privacy policy →</a></p>
+        </div>
+      </section>
+
+      <section id="pricing" class="band">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">Pricing</span>
+            <h2>Free for everyone. Pro if you want more.</h2>
+            <p>Everything you need is free, forever. Pro is a one-time purchase — no subscription, no account.</p>
+          </div>
+          <div class="pricing">
+            <div class="plan">
+              <h3>Free</h3>
+              <div class="price">$0</div>
+              <ul class="checks">
+                <li>The floating panel, in every mode</li>
+                <li>Comments about this moment &amp; community index</li>
+                <li>Search, sort by likes, mute words</li>
+                <li>Save up to 3 comments</li>
+                <li>Export up to 50 comments at a time</li>
+              </ul>
+              <a class="btn btn-ghost" data-cws href="#get">Add to Chrome</a>
+            </div>
+            <div class="plan pro">
+              <span class="tag">One-time</span>
+              <h3>Pro</h3>
+              <div class="price">$4.99 <small>once</small></div>
+              <ul class="checks">
+                <li>Everything in Free</li>
+                <li><span><strong>Unlimited</strong> saved comments</span></li>
+                <li><span><strong>Unlimited</strong> exports</span></li>
+                <li>Notes, tags and share cards for all of them</li>
+                <li>Supports an independent developer ❤️</li>
+              </ul>
+              <a class="btn btn-primary" href="https://eavesdrop.lemonsqueezy.com" rel="noopener">Get Pro</a>
+            </div>
+          </div>
+          <p class="cta-note">
+            Payments are handled securely by Lemon Squeezy. You'll get a license key by email — paste it in
+            Eavesdrop's Settings and you're done.
+          </p>
+        </div>
+      </section>
+
+      <section id="faq">
+        <div class="wrap">
+          <div class="section-head">
+            <span class="kicker">FAQ</span>
+            <h2>Questions</h2>
+          </div>
+          <div class="faq">
+            <details>
+              <summary>Does it cover the video or the subtitles?</summary>
+              <p>You decide where it goes: drag it, resize it, snap it to a corner, lower its opacity or minimize it to a small bubble. It never covers the subtitles.</p>
+            </details>
+            <details>
+              <summary>Do I need an account?</summary>
+              <p>No. Not for Eavesdrop, and not for buying Pro — checkout only asks for an email to send your license key.</p>
+            </details>
+            <details>
+              <summary>Does Eavesdrop collect my data?</summary>
+              <p>No. It has no servers. Comments are fetched from YouTube's official API with only the video ID, and everything you save stays in your browser. See the <a href="privacy.html">privacy policy</a>.</p>
+            </details>
+            <details>
+              <summary>What happens if I reinstall Chrome or the extension?</summary>
+              <p>Paste the same license key again in Settings. It's in the confirmation email from your purchase.</p>
+            </details>
+            <details>
+              <summary>Which browsers are supported?</summary>
+              <p>Google Chrome and Chromium-based browsers that support Chrome Web Store extensions, like Edge and Brave.</p>
+            </details>
+            <details>
+              <summary>Can I get a refund?</summary>
+              <p>Yes. If Pro isn't for you, reply to your purchase email within 14 days and you'll get your money back.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="get" class="final band">
+        <div class="wrap">
+          <h2>Watch and read at the same time.</h2>
+          <p class="lead">Eavesdrop is free. Install it in seconds and open any YouTube video.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" data-cws href="#get">Add to Chrome — it's free</a>
+          </div>
+          <p class="cta-note" data-cws-soon hidden>Coming soon to the Chrome Web Store.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <a class="brand" href="./">
+          <img src="assets/icon-128.png" alt="" width="24" height="24" />
+          Eavesdrop
+        </a>
+        <nav aria-label="Footer">
+          <a href="privacy.html">Privacy</a>
+          <a href="mailto:fixcelservice@gmail.com">Contact</a>
+        </nav>
+        <p class="disclaimer">
+          Eavesdrop is not affiliated with, endorsed by, or sponsored by YouTube or Google. YouTube is a trademark of Google LLC.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      // Link de la Chrome Web Store: pegarlo aca cuando la ficha este
+      // publicada. Mientras este vacio, los botones "Add to Chrome" llevan
+      // al final de la pagina y se muestra "Coming soon".
+      const CHROME_WEB_STORE_URL = '';
+      if (CHROME_WEB_STORE_URL) {
+        document.querySelectorAll('[data-cws]').forEach((a) => {
+          a.href = CHROME_WEB_STORE_URL;
+          a.rel = 'noopener';
+        });
+      } else {
+        document.querySelectorAll('[data-cws-soon]').forEach((el) => (el.hidden = false));
+      }
+    </script>
+  </body>
+</html>
