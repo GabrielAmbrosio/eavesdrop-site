@@ -6,6 +6,7 @@ Static HTML/CSS, served with GitHub Pages. No build step, no trackers.
 
 - `index.html` — landing page
 - `privacy.html` — privacy policy (link this URL in the Chrome Web Store listing)
+- `terms.html` — terms of use (YouTube Terms of Service, Pro license)
 - `style.css`, `assets/` — styles, icon, share-card image
 
 When the Chrome Web Store listing is live, set `CHROME_WEB_STORE_URL` at the bottom of `index.html`.

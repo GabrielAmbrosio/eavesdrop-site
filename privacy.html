@@ -25,7 +25,7 @@
     <main class="legal">
       <div class="wrap">
         <h1>Privacy Policy</h1>
-        <p class="updated">Last updated: September 24, 2026</p>
+        <p class="updated">Last updated: September 27, 2026</p>
 
         <div class="summary">
           <p style="margin: 0">
@@ -36,6 +36,23 @@
         </div>
 
         <p>Eavesdrop is not affiliated with, endorsed by, or sponsored by YouTube, Google, or Lemon Squeezy.</p>
+
+        <h2>YouTube API Services</h2>
+        <p>
+          Eavesdrop uses <strong>YouTube API Services</strong> to show comments. By using Eavesdrop you are also using
+          YouTube's services, so the
+          <a href="https://www.youtube.com/t/terms" target="_blank" rel="noopener noreferrer">YouTube Terms of Service</a>
+          apply, and Google's handling of those requests is covered by the
+          <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>.
+        </p>
+        <p>
+          Eavesdrop never accesses your Google or YouTube account: it does not ask you to sign in and does not use OAuth,
+          so there is no account access to revoke. To remove the data Eavesdrop keeps, uninstall the extension (this
+          deletes its settings, license and saved comments), or use “Clear all” in Eavesdrop's Settings to delete your
+          saved comments. The comment cache and the “seen” list live in YouTube's own site storage (see the caveat
+          below): cached comments are deleted automatically at most 30 days after they were fetched, and you can remove
+          both right away by clearing your browser's site data for <code>youtube.com</code>.
+        </p>
 
         <h2>What Eavesdrop reads</h2>
         <p>
@@ -104,8 +121,8 @@
           <li>
             <strong>A few small device-local values:</strong> the panel's position, size and open/closed state, which
             comment IDs you've already seen per video (for “new since your last visit”), whether you've seen the
-            first-use tips, and a local cache of recently viewed videos' comments so they load instantly. None of this
-            leaves your browser.
+            first-use tips, and a local cache of recently viewed videos' comments so they load instantly (kept at most 30
+            days after they were fetched). None of this leaves your browser.
           </li>
         </ul>
         <p>
@@ -151,6 +168,7 @@
         </a>
         <nav aria-label="Footer">
           <a href="./">Home</a>
+          <a href="terms.html">Terms</a>
           <a href="mailto:fixcelservice@gmail.com">Contact</a>
         </nav>
         <p class="disclaimer">
