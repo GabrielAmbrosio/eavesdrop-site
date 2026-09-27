@@ -50,8 +50,8 @@
           so there is no account access to revoke. To remove the data Eavesdrop keeps, uninstall the extension (this
           deletes its settings, license and saved comments), or use “Clear all” in Eavesdrop's Settings to delete your
           saved comments. The comment cache and the “seen” list live in YouTube's own site storage (see the caveat
-          below): cached comments are deleted automatically at most 30 days after they were fetched, and you can remove
-          both right away by clearing your browser's site data for <code>youtube.com</code>.
+          below): cached comments are never used more than 30 days after they were fetched and are deleted the next time
+          Eavesdrop loads comments after that, and you can remove both right away by clearing your browser's site data for <code>youtube.com</code>.
         </p>
 
         <h2>What Eavesdrop reads</h2>
@@ -121,8 +121,8 @@
           <li>
             <strong>A few small device-local values:</strong> the panel's position, size and open/closed state, which
             comment IDs you've already seen per video (for “new since your last visit”), whether you've seen the
-            first-use tips, and a local cache of recently viewed videos' comments so they load instantly (kept at most 30
-            days after they were fetched). None of this leaves your browser.
+            first-use tips, and a local cache of recently viewed videos' comments so they load instantly (never used, and
+            deleted, once 30 days have passed since they were fetched). None of this leaves your browser.
           </li>
         </ul>
         <p>
